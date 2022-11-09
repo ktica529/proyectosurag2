@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../proyectos/pruebagit"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "proyectosurag2"
+	}
+}
