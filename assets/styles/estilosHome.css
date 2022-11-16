@@ -18,3 +18,12 @@
     padding: 20%;
     background-attachment: fixed;
 }
+
+.bannersura2{
+    
+    background-image: url('../img/pcte3.jpeg');
+    background-position: top center;
+    background-size: cover;
+    padding: 20%;
+    background-attachment: fixed;
+}
