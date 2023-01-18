@@ -11,7 +11,7 @@ export function capturaDatos(etiquetaNombre,etiquetaDocumento,etiquetaespecialid
     let sede=etiquetasede.value
     let horario=etiquetahorario.value
     let descripcion=etiquetadescripcion.value
-    let fotografia=etiquetafotografia.value
+    let fotografiaMedico=etiquetafotografia.value
 
     // //console.log(nombresMedico)
     // console.log(documentoMedico)
@@ -27,7 +27,7 @@ export function capturaDatos(etiquetaNombre,etiquetaDocumento,etiquetaespecialid
     // en una Sola VARIABLE
     // OBJETO=ALAMCENAR VARIOS DATOS EN 1 SOLO ESPACIO DE MEMORIA 
     let datosFormularioMedico={
-        nombre:nombresMedico,
+        nombres:nombresMedico,
         documento:documentoMedico,
         especialidad:especialidadMedico,
         Registro:RegistroProfesional,
@@ -35,8 +35,10 @@ export function capturaDatos(etiquetaNombre,etiquetaDocumento,etiquetaespecialid
         sede:sede,
         horario:horario,
         descripcion:descripcion,
-        foto:fotografia,
+        fotografia:fotografiaMedico
     }
+
+    console.log(datosFormularioMedico)
 
     validarFormulario(datosFormularioMedico)
 

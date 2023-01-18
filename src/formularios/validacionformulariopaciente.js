@@ -1,22 +1,19 @@
-import {registarMedico} from "../../services/registrarmedico.js"
-
 export function validarFormulario(datos){
     
     //REFERENCIAS A ETIQUETAS QUE QUIERO VALIDAR
-    let etiquetaNombre=document.getElementById("nombres")
-    let etiquetaDocumento=document.getElementById("documento")
-    let etiquetaRegistroProfesional=document.getElementById("Registroprofesional")
-
+    let etiquetaNombre=document.getElementById("nombrepaciente")
+    let etiquetaDocumento=document.getElementById("docpaciente")
+    
 
     //validamos 3 campos del formulario
     //nombres-documento-registro del medico
-    let nombresMedico=datos.nombre
-    let documentoMedico=datos.documento
-    let RegistroProfesional=datos.RegistroProfesional
+    let nombrespaciente=datos.nombre
+    let documentopaciente=datos.documento
+    
 
     //AGREGAR TODOS LOS CAMINOS POSIBLES PARA VALIDAR 
     //EL FORMULARIO
-    if(nombresMedico=="" && documentoMedico==""){
+    if(nombrespaciente=="" && documentopaciente==""){
         etiquetaNombre.classList.add("is-invalid")
         etiquetaDocumento.classList.add("is-invalid")
         
@@ -26,16 +23,14 @@ export function validarFormulario(datos){
             text: 'Nombre y documento son obligatorios',
             
           })
-    }else if(nombresMedico=="" && documentoMedico!=""){
+    }else if(nombrespaciente=="" && documentopaciente!=""){
         etiquetaNombre.classList.add("is-invalid")
         etiquetaDocumento.classList.remove("is-invalid")     
-    }else if(nombresMedico!="" && documentoMedico==""){
+    }else if(nombrespaciente!="" && documentopaciente==""){
         etiquetaNombre.classList.remove("is-invalid")
         etiquetaDocumento.classList.add("is-invalid")
     }else{
-        registarMedico(datos)
-        etiquetaNombre.classList.remove("is-invalid")
-        etiquetaDocumento.classList.remove("is-invalid")
+        alert("nos vamos para la bd")
     }
 
 }
